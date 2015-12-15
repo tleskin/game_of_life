@@ -33,6 +33,6 @@ class Cell
   end
 
   def display
-    print @alive ? "x" : "."
+    print @alive ? "X" : "."
   end
 end

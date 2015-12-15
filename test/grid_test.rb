@@ -23,7 +23,7 @@ class GridTest < Minitest::Test
     grid.rows_of_cells[1][0].alive = true
     grid.rows_of_cells[2][1].alive = true
     grid.rows_of_cells[2][2].alive = true
-    neighbors = grid.neighbors(1, 2)
+    neighbors = grid.calc_alive(1, 2)
     assert_equal 2, neighbors
   end
 
@@ -33,7 +33,7 @@ class GridTest < Minitest::Test
     grid.rows_of_cells[1][0].alive = true
     grid.rows_of_cells[2][1].alive = true
     grid.rows_of_cells[2][2].alive = true
-    neighbors = grid.neighbors(2, 0)
+    neighbors = grid.calc_alive(2, 0)
     assert_equal 2, neighbors
   end
 
@@ -43,7 +43,7 @@ class GridTest < Minitest::Test
     grid.rows_of_cells[1][0].alive = true
     grid.rows_of_cells[2][1].alive = true
     grid.rows_of_cells[2][2].alive = true
-    neighbors = grid.neighbors(0, 0)
+    neighbors = grid.calc_alive(0, 0)
     assert_equal 1, neighbors
   end
 end

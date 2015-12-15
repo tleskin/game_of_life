@@ -4,7 +4,7 @@ class Grid
   def initialize(rows, columns)
     @rows_of_cells = Array.new()
     rows.times do
-      @rows_of_cells << columns.times.map { Cell.new([true, false, true].sample) }
+      @rows_of_cells << columns.times.map { Cell.new([false, true].sample) }
     end
     @row = nil
     @column = nil
